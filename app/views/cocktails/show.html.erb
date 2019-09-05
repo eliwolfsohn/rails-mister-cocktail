@@ -1,0 +1,18 @@
+<div class="container">
+  <h2><%= @cocktail.name %></h2>
+  <!-- <div class="row"> -->
+    <ul>
+      <% @cocktail.doses.each do |dose| %>
+        <li>
+            <%#= link_to dose.description, dose_path(@task)%>
+            <%= dose.description %>
+        </li>
+      <% end %>
+    </ul>
+    <!-- <div class="row"> -->
+    </div>
+    <%= link_to "Add Dose", edit_cocktail_path(@cocktail) %>
+    <%= link_to "Back to List", root_path %>
+
+  </div>
+</div>
